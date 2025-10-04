@@ -1,0 +1,69 @@
+---
+import Logo from '../assets/icons/logo.svg';
+import Hamburger from '../assets/icons/hamburger.svg';
+
+const menuItems = [
+    { href: "#home", label: "Home" },
+    { href: "#areas-covered", label: "Areas Covered" },
+    { href: "#about", label: "About" },
+    { href: "#contact", label: "Contact" }
+];
+---
+
+<!-- Hidden checkbox to control menu state -->
+<input type="checkbox" id="menu-toggle" class="peer hidden" />
+
+<div class="box font-plus-jakarta-sans flex justify-between items-center mt-3 xl:mt-8 relative z-50">
+    <div>
+        <Logo class="w-24 md:w-28 h-auto lg:w-full" />
+    </div>
+   
+    <!-- Desktop Menu -->
+    <div class="gap-6 xl:gap-11 hidden md:flex">
+        {menuItems.map(item => (
+            <a class="opacity-70 hover:opacity-100 hover:font-bold" href={item.href}>{item.label}</a>
+        ))}
+    </div>
+
+    <!-- Desktop Button -->
+    <button class="text-base font-semibold hidden md:block py-2 px-3 lg:px-5 border border-black">CONTACT US</button>
+
+    <!-- Hamburger Icon (Mobile) -->
+    <label for="menu-toggle" class="md:hidden cursor-pointer z-50">
+        <Hamburger />
+    </label>
+</div>
+
+<!-- Overlay -->
+<label for="menu-toggle" class="fixed inset-0 bg-black/50 backdrop-blur-sm opacity-0 pointer-events-none peer-checked:opacity-100 peer-checked:pointer-events-auto transition-opacity duration-300 z-40 md:hidden"></label>
+
+<!-- Mobile Sidebar -->
+<div class="fixed top-0 right-0 h-full w-64 bg-white shadow-2xl transform translate-x-full peer-checked:translate-x-0 transition-transform duration-300 ease-in-out z-50 md:hidden">
+    <div class="flex flex-col h-full p-6">
+        <!-- Close Button -->
+        <label for="menu-toggle" class="self-end cursor-pointer text-4xl font-md mb-8 text-gray-600 hover:text-black">
+            ×
+        </label>
+
+        <!-- Menu Items -->
+        <nav class="flex flex-col gap-6">
+            {menuItems.map(item => (
+                <a class="text-lg opacity-70 hover:opacity-100 hover:font-bold transition-all" href={item.href}>{item.label}</a>
+            ))}
+        </nav>
+
+        <!-- Contact Button -->
+        <div class="mt-auto">
+            <button class="w-full text-base font-semibold py-3 px-5 border-2 border-black hover:bg-black hover:text-white transition-colors">
+                CONTACT US
+            </button>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Prevent body scroll when menu is open */
+    #menu-toggle:checked ~ body {
+        overflow: hidden;
+    }
+</style>
