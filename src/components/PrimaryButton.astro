@@ -1,0 +1,12 @@
+
+---
+interface Props {
+  text: string;
+  additionalClass: string;
+}
+
+const { text, additionalClass } = Astro.props;
+---
+<button class={`bg-btn-color font-plus-jakarta-sans text-white py-3 px-8 text-base ${additionalClass}`}>
+  {text}
+</button>

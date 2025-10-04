@@ -4,6 +4,7 @@ import Fi1 from '../assets/icons/fi-1.svg';
 import Fi2 from '../assets/icons/fi-2.svg';
 import Fi3 from '../assets/icons/fi-3.svg';
 import Fi4 from '../assets/icons/fi-4.svg';
+import PrimaryButton from './PrimaryButton.astro';
 ---
 <div class="box  md:flex bg-primary justify-between px-5 sm:px-8  lg:px-[50px] py-6 sm:py-8 md:py-10 lg:py-12 mt-12 sm:mt-16 md:mt-20 lg:mt-[120px]">
     <div class="md:w-1/2 flex justify-between gap-3 sm:gap-4 md:gap-5 lg:gap-6 md:mb-0 mb-10">
@@ -11,9 +12,10 @@ import Fi4 from '../assets/icons/fi-4.svg';
           <h1 class="font-perfectly-nineties text-4xl md:text-5xl lg:text-[60px]">Why Choose Us</h1>
         <p class="font-plus-jakarta-sans text-sm sm:text-base md:text-[12px] lg:text-[18px] mt-3 sm:mt-4 md:mt-5 mb-6 sm:mb-7 md:mb-9 lg:mb-10">Lorem ipsum dolor sit amet adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
         
-        <button class="bg-btn-color font-plus-jakarta-sans text-white py-3 px-8 text-base">
+        <!-- <button class="bg-btn-color font-plus-jakarta-sans text-white py-3 px-8 text-base">
             Discover More
-        </button>
+        </button> -->
+        <PrimaryButton text="Discover More" additionalClass=""/>
       </div>
       <div class="flex md:hidden lg:flex items-end">
         <Broom class="w-16 sm:w-20 md:w-24 lg:w-auto"/>
