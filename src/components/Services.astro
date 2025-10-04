@@ -1,0 +1,90 @@
+---
+import Image from 'astro/components/Image.astro';
+import CleaningImage from '../assets/images/cleaning-image.png';
+import Fi5 from '../assets/icons/fi-5.svg';
+import Fi6 from '../assets/icons/fi-6.svg';
+import Fi7 from '../assets/icons/fi-7.svg';
+import Fi8 from '../assets/icons/fi-8.svg';
+import Fi9 from '../assets/icons/fi-9.svg';
+import UpperRightArrow from '../assets/icons/upper-right-arrow.svg';
+
+---
+<section class="box mt-[120px]">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24 items-center">
+        
+        <!-- Left Column: Content -->
+        <div>
+            <h2 class="font-perfectly-nineties text-4xl sm:text-5xl md:text-6xl leading-tight mb-8 md:mb-12">
+                Comprehensive After Builders Cleaning
+            </h2>
+
+            <div class="space-y-4 mb-8 md:mb-12">
+                <div class="flex items-center gap-4 bg-[#eaf1eb] rounded-lg p-4 hover:bg-[#dcf2df] transition-colors">
+                    <div class="flex-shrink-0 w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-xl">
+                        <Fi5/>
+                        <!-- Replace with: <DustIcon class="w-5 h-5" /> -->
+                    </div>
+                    <p class="font-plus-jakarta-sans text-base md:text-lg">
+                        Dust & debris removal
+                    </p>
+                </div>
+
+                <div class="flex items-center gap-4 bg-[#eaf1eb] rounded-lg p-4 hover:bg-[#dcf2df] transition-colors">
+                    <div class="flex-shrink-0 w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-xl">
+                        <Fi6/>
+                        <!-- Replace with: <KitchenIcon class="w-5 h-5" /> -->
+                    </div>
+                    <p class="font-plus-jakarta-sans text-base md:text-lg">
+                        Deep clean of kitchens & bathrooms
+                    </p>
+                </div>
+
+                <div class="flex items-center gap-4 bg-[#eaf1eb] rounded-lg p-4 hover:bg-[#dcf2df] transition-colors">
+                    <div class="flex-shrink-0 w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-xl">
+                        <Fi7/>
+                        <!-- Replace with: <WindowIcon class="w-5 h-5" /> -->
+                    </div>
+                    <p class="font-plus-jakarta-sans text-base md:text-lg">
+                        Internal windows, doors, frames
+                    </p>
+                </div>
+
+                <div class="flex items-center gap-4 bg-[#eaf1eb] rounded-lg p-4 hover:bg-[#dcf2df] transition-colors">
+                    <div class="flex-shrink-0 w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-xl">
+                        <Fi8/>
+                        <!-- Replace with: <SkirtingIcon class="w-5 h-5" /> -->
+                    </div>
+                    <p class="font-plus-jakarta-sans text-base md:text-lg">
+                        Skirting boards & fittings
+                    </p>
+                </div>
+
+                <div class="flex items-center gap-4 bg-[#eaf1eb] rounded-lg p-4 hover:bg-[#dcf2df] transition-colors">
+                    <div class="flex-shrink-0 w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-xl">
+                        <Fi9/>
+                        <!-- Replace with: <FloorIcon class="w-5 h-5" /> -->
+                    </div>
+                    <p class="font-plus-jakarta-sans text-base md:text-lg">
+                        Hard floor polishing & carpet vacuuming
+                    </p>
+                </div>
+            </div>
+
+
+                <button class="bg-btn-color flex gap-2 items-center font-plus-jakarta-sans text-white py-4 px-6 font-medium text-base">
+                    REQUEST A FULL QUOTE
+                    <UpperRightArrow/>
+                </button>
+        </div>
+
+        <!-- Right Column: Image -->
+        <div class="relative h-[400px] md:h-[500px] lg:h-full overflow-hidden">
+            <Image
+                src={CleaningImage}
+                alt="Professional cleaners working in an office"
+                class="w-full h-full object-cover"
+            />
+        </div>
+
+    </div>
+</section>
