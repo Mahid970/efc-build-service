@@ -1,1 +1,19 @@
 @import "tailwindcss";
+@font-face {
+  font-family: "PerfectlyNineties";
+  src: url("/public/fonts/perfectly-nineties-regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PlusJakartaSans";
+  src: url("/public/fonts/PlusJakartaSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@theme {
+  --font-perfectly-nineties: "PerfectlyNineties", sans-serif;
+  --font-plus-jakarta-sans: "PlusJakartaSans", sans-serif;
+}
