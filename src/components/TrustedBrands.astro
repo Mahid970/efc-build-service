@@ -1,0 +1,69 @@
+---
+import Brand1 from '../assets/icons/brand-1.svg';
+import Brand2 from '../assets/icons/brand-2.svg';
+import Brand3 from '../assets/icons/brand-3.svg';
+import Brand4 from '../assets/icons/brand-4.svg';
+import Brand5 from '../assets/icons/brand-5.svg';
+import Brand6 from '../assets/icons/brand-6.svg';
+import Brand7 from '../assets/icons/brand-7.svg';
+
+const brands = [Brand1, Brand2, Brand3, Brand4, Brand5, Brand6, Brand7];
+---
+
+<div class="mt-28">
+    <h3 class="font-perfectly-nineties text-3xl text-center box">
+        Trusted by leading London developers & homeowners
+    </h3>
+    
+    <div class="overflow-hidden mt-11">
+        <div class="marquee-container flex">
+            <!-- First set of logos -->
+            <div class="marquee-content flex items-center gap-8 lg:gap-18 opacity-60">
+                {brands.map((Brand) => (
+                    <div class="flex-shrink-0 w-38 h-auto flex items-center justify-center">
+                        <Brand class="max-w-full max-h-full object-contain" />
+                    </div>
+                ))}
+            </div>
+            <!-- Duplicate set for seamless loop -->
+            <div class="marquee-content flex items-center gap-12 opacity-60">
+                {brands.map((Brand) => (
+                    <div class="flex-shrink-0 w-32 h-16 flex items-center justify-center">
+                        <Brand class="max-w-full max-h-full object-contain" />
+                    </div>
+                ))}
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .marquee-container {
+        width: fit-content;
+        animation: scroll 30s linear infinite;
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+    /* Pause animation on hover */
+    .marquee-container:hover {
+        animation-play-state: paused;
+    }
+
+    /* Hide scrollbar */
+    .overflow-hidden {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .overflow-hidden::-webkit-scrollbar {
+        display: none;
+    }
+</style>
