@@ -1,0 +1,124 @@
+---
+import Image from 'astro/components/Image.astro';
+import LeftArrow from '../assets/icons/left-arrow.svg';
+import RightArrow from '../assets/icons/right-arrow.svg';
+import Quotation from '../assets/icons/quotation.svg';
+import GoogleIcon from '../assets/icons/google-icon.svg';
+import Star2 from '../assets/icons/star-2.svg';
+import Tamin from '../assets/images/tamin.png';
+import Dana from '../assets/images/dana.png';
+import Jennifer from '../assets/images/jennifer.png';
+
+const testimonials = [
+    {
+        text: "Daniel was workmanlike at figuring out the issue and explaining what had happened. He cleared out the sewer efficiently and got the job done with speed.",
+        name: "Tamin",
+        role: "Customer",
+        image: Tamin
+    },
+    {
+        text: "I had such a great and seamless experience with Jett Plumbing. Daniel was professional and reliable, and came to fix my blocked drain in a prompt manner. Will definitely be back for any of my future plumbing needs!",
+        name: "Dana L",
+        role: "Customer",
+        image: Dana
+    },
+    {
+        text: "Daniel was so professional, he knew the problem just but the vague description I gave him. He was quick and thorough. After the job was done, he checked and cleaned all outlets for us for free. Would highly recommend.",
+        name: "Jennifer R",
+        role: "Customer",
+        image: Jennifer
+    },
+];
+---
+
+<section class="py-12 md:py-16 lg:py-20 box">
+    <div class="max-w-7xl mx-auto">
+        <div class="flex justify-between items-end mb-8 md:mb-12 lg:mb-16">
+            <h2 class="font-perfectly-nineties text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight max-w-md">
+                What our Customers think
+            </h2>
+            <div class="flex gap-3 md:gap-4">
+                <button 
+                    id="prev-btn" 
+                    class="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors rounded-full"
+                    aria-label="Previous testimonial"
+                >
+                    <LeftArrow class="w-[18px] md:w-full" />
+                </button>
+                <button 
+                    id="next-btn" 
+                    class="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors rounded-full"
+                    aria-label="Next testimonial"
+                >
+                    <RightArrow class="w-[18px] md:w-full"/>
+                </button>
+            </div>
+        </div>
+        <div class="overflow-hidden -mx-3">
+            <div id="slider" class="flex transition-transform duration-500 ease-in-out">
+                {testimonials.map((testimonial, index) => (
+                    <div class="flex-shrink-0 w-[302px] sm:w-[412px] md:w-[478px] px-3">
+                        <div class="bg-gray-100 rounded-2xl p-6 md:p-8 lg:p-10 h-[481px] flex flex-col">
+                            <div class="flex justify-between items-start mb-6">
+                                <Quotation />
+                                <GoogleIcon class="w-10 h-10" />
+                            </div>
+                            <p class="font-plus-jakarta-sans text-base md:text-lg mb-6 leading-relaxed flex-grow">
+                                {testimonial.text}
+                            </p>
+                            <div class="mt-auto">
+                                <div class="w-18 h-0.5 bg-black mb-4"></div>
+                                <div class="flex gap-2 mb-6">
+                                    {[...Array(5)].map(() => (
+                                        <Star2 />
+                                    ))}
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <Image
+                                        src={testimonial.image}
+                                        alt={testimonial.name}
+                                        class="w-12 h-12 md:w-14 md:h-14 rounded-full object-cover"
+                                    />
+                                    <div>
+                                        <div class="font-semibold text-base md:text-lg">{testimonial.name}</div>
+                                        <div class="text-sm md:text-base text-gray-600">{testimonial.role}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const slider = document.getElementById('slider');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        if (!slider || !prevBtn || !nextBtn) return;
+        let currentIndex = 0;
+        const totalCards = slider.children.length;
+        function updateSlider(transition = true) {
+            if (!slider) return;
+            slider.style.transition = transition ? 'transform 0.5s ease-in-out' : 'none';
+            const firstChild = slider.children[0];
+            if (!(firstChild instanceof HTMLElement)) return;
+            const cardWidth = firstChild.offsetWidth;
+            const offset = currentIndex * cardWidth;
+            slider.style.transform = `translateX(-${offset}px)`;
+        }
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + totalCards) % totalCards;
+            updateSlider();
+        });
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % totalCards;
+            updateSlider();
+        });
+        window.addEventListener('resize', () => updateSlider(false));
+        updateSlider(false);
+    });
+</script>
