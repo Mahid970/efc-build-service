@@ -1,0 +1,52 @@
+---
+import Image from 'astro/components/Image.astro';
+import Development from '../assets/images/development.png';
+import HeroImg2 from '../assets/images/hero-img-2.png';
+import UpperRightArrow from '../assets/icons/upper-right-arrow.svg';
+---
+
+<div class="py-12 md:py-16 lg:py-20">
+  <div class="text-center mb-8 md:mb-12 lg:mb-16">
+    <h2 class="font-perfectly-nineties text-4xl md:text-5xl lg:text-6xl">
+      Who We Serve
+    </h2>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-0 lg:gap-0">
+    <div class="group relative overflow-hidden border-t md:border-r md:border-t md:border-b border-gray-200">
+      <div class="p-6 md:p-8 lg:p-12">
+        <div class="relative overflow-hidden mb-6 md:mb-8 aspect-[4/3]">
+          <Image src={Development} alt="Construction developments" class="w-full h-full object-cover" />
+          <button class="absolute hover:cursor-pointer bottom-4 right-4 text-white border w-10 h-10 md:w-12 md:h-12 flex items-center justify-center hover:bg-gray-500 hover:border-0 transition-colors">
+            <a href="#developers">
+              <UpperRightArrow />
+            </a>
+          </button>
+        </div>
+        <h3 class="font-perfectly-nineties text-2xl md:text-3xl lg:text-4xl mb-3 md:mb-4">
+          Developments
+        </h3>
+        <p class="font-plus-jakarta-sans text-base md:text-lg text-black opacity-80">
+          Multi-unit handover cleans, fast turnaround, contractor coordination.
+        </p>
+      </div>
+    </div>
+    <div class="group relative overflow-hidden border-t border-b border-gray-200">
+      <div class="p-6 md:p-8 lg:p-12">
+        <div class="relative overflow-hidden mb-6 md:mb-8 aspect-[4/3]">
+          <Image src={HeroImg2} alt="Luxury residential property" class="w-full h-full object-cover" />
+          <button class="absolute hover:cursor-pointer bottom-4 right-4 text-white border w-10 h-10 md:w-12 md:h-12 flex items-center justify-center hover:bg-gray-500 hover:border-0 transition-colors">
+            <a href="#residential">
+              <UpperRightArrow />
+            </a>
+          </button>
+        </div>
+        <h3 class="font-perfectly-nineties text-2xl md:text-3xl lg:text-4xl mb-3 md:mb-4">
+          Luxury Residential
+        </h3>
+        <p class="font-plus-jakarta-sans text-base md:text-lg text-black opacity-80">
+          Delicate finishes (marble, stone, bespoke kitchens), discreet, detail-focused.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
