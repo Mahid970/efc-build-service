@@ -1,0 +1,194 @@
+---
+import Image from 'astro/components/Image.astro';
+import HowItWorksImage1 from '../assets/images/how-it-works-img-1.png';
+---
+
+<section class="py-16 px-4 bg-white">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-4xl md:text-5xl font-serif text-center mb-12 md:mb-16">How It Works</h2>
+    
+    <div class="relative">
+      <!-- Timeline Line - Horizontal for desktop, Vertical for mobile -->
+      <div class="absolute top-8 left-0 right-0 h-0.5 bg-gray-300 hidden md:block"></div>
+      <div class="absolute left-[15px] top-0 bottom-0 w-0.5 bg-gray-300 md:hidden"></div>
+      
+      <!-- Steps Container -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-8 relative">
+        <!-- Step 1 -->
+        <div class="step-item">
+          <input type="radio" name="step" id="step1" class="step-radio" />
+          <div class="flex md:flex-col gap-4 md:gap-0">
+            <div class="flex-shrink-0 number-index">
+              <label 
+                for="step1"
+                class="step-circle w-8 h-8 md:w-12 md:h-12 xl:w-16 xl:h-16 rounded-full border-2 border-gray-800 bg-white flex items-center justify-center text-sm md:text-xl font-semibold md:mx-auto md:mb-6 hover:bg-gray-800 hover:text-white transition-colors cursor-pointer relative z-10"
+              >
+                1
+              </label>
+            </div>
+
+            <div class="flex-1">
+              <div class="text-container">
+                <h3 class="text-lg md:text-xl font-bold mb-2 md:mb-3">Request A Quote</h3>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4 md:mb-0">
+                Lorem ipsum dolor sit amet adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              </div>
+              
+              
+              <div class="image-container mt-4 md:mt-4 rounded-lg overflow-hidden shadow-lg">
+                <Image 
+                  src={HowItWorksImage1} 
+                  alt="Request a quote"
+                  class="w-full h-48 md:h-64 object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-item">
+          <input type="radio" name="step" id="step2" class="step-radio" />
+          <div class="flex md:flex-col gap-4 md:gap-0">
+            <div class="flex-shrink-0 number-index">
+              <label 
+                for="step2"
+                class="step-circle w-8 h-8 md:w-12 md:h-12 xl:w-16 xl:h-16 rounded-full border-2 border-gray-800 bg-white flex items-center justify-center text-sm md:text-xl font-semibold md:mx-auto md:mb-6 hover:bg-gray-800 hover:text-white transition-colors cursor-pointer relative z-10"
+              >
+                2
+              </label>
+            </div>
+            
+            <div class="flex-1">
+             <div class="text-container">
+                 <h3 class="text-lg md:text-xl font-bold mb-2 md:mb-3">Tailored Cleaning Plan</h3>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4 md:mb-0">
+                Lorem ipsum dolor sit amet adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+             </div>
+              
+              <div class="image-container mt-4 md:mt-4 rounded-lg overflow-hidden shadow-lg">
+                <Image 
+                  src={HowItWorksImage1} 
+                  alt="Tailored cleaning plan"
+                  class="w-full h-48 md:h-64 object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3 - Default Active -->
+        <div class="step-item">
+          <input type="radio" name="step" id="step3" class="step-radio" checked />
+          <div class="flex md:flex-col gap-4 md:gap-0">
+            <div class="flex-shrink-0 number-index">
+              <label 
+                for="step3"
+                class="step-circle w-8 h-8 md:w-12 md:h-12 xl:w-16 xl:h-16 rounded-full border-2 border-gray-800 bg-white flex items-center justify-center text-sm md:text-xl font-semibold md:mx-auto md:mb-6 hover:bg-gray-800 hover:text-white transition-colors cursor-pointer relative z-10"
+              >
+                3
+              </label>
+            </div>
+            
+            <div class="flex-1">
+              <div class="text-container">
+                <h3 class="text-lg md:text-xl font-bold mb-2 md:mb-3">On-Site Professional Clean</h3>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4 md:mb-0">
+                Lorem ipsum dolor sit amet adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              </div>
+              
+              <div class="image-container mt-4 md:mt-4 rounded-lg overflow-hidden shadow-lg">
+                <Image 
+                  src={HowItWorksImage1} 
+                  alt="Professional cleaning service in modern office"
+                  class="w-full h-48 md:h-64 object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="step-item">
+          <input type="radio" name="step" id="step4" class="step-radio" />
+          <div class="flex md:flex-col gap-4 md:gap-0">
+            <div class="flex-shrink-0 number-index">
+              <label 
+                for="step4"
+                class="step-circle w-8 h-8 md:w-12 md:h-12 xl:w-16 xl:h-16 rounded-full border-2 border-gray-800 bg-white flex items-center justify-center text-sm md:text-xl font-semibold md:mx-auto md:mb-6 hover:bg-gray-800 hover:text-white transition-colors cursor-pointer relative z-10"
+              >
+                4
+              </label>
+            </div>
+            
+            <div class="flex-1">
+             <div class="text-container">
+                 <h3 class="text-lg md:text-xl font-bold mb-2 md:mb-3">Final Inspection & Ready To Handover</h3>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4 md:mb-0">
+                Lorem ipsum dolor sit amet adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+             </div>
+              
+              <div class="image-container mt-4 md:mt-4 rounded-lg overflow-hidden shadow-lg">
+                <Image 
+                  src={HowItWorksImage1} 
+                  alt="Final inspection"
+                  class="w-full h-48 md:h-64 object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Hide radio buttons */
+  .step-radio {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  /* Hide all images by default */
+  .step-item .image-container {
+    display: none;
+    animation: fadeIn 0.4s ease-in-out;
+  }
+  
+  /* Show image when radio is checked */
+  .step-item:has(.step-radio:checked) .image-container {
+    display: block;
+  }
+  @media (min-width: 768px) {
+   .step-item:has(.step-radio:checked) .text-container {
+    display: none;
+  }
+  .step-item:has(.step-radio:checked) .number-index {
+    display: none;
+  }
+}
+ 
+  
+  /* Style the active circle */
+  .step-radio:checked + .flex .step-circle {
+    background-color: #1f2937;
+    color: white;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
