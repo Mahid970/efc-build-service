@@ -1,0 +1,144 @@
+---
+import Image from 'astro/components/Image.astro';
+import Logo from '../assets/icons/logo.svg';
+import Facebook from '../assets/icons/facebook.svg';
+import Instagram from '../assets/icons/instagram.svg';
+import YouTube from '../assets/icons/youtube.svg';
+---
+
+<footer class="bg-secondary pt-12 font-plus-jakarta-sans">
+  <div class=" box">
+    <!-- Main Footer Content -->
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 md:gap-12 mb-12">
+      <!-- Logo & Description -->
+      <div class="md:col-span-1 md:w-2/3 lg:w-full">
+        <div class="mb-4">
+          <Image
+            src={Logo}
+            alt="EFC Build Service" 
+            class="h-20 w-auto"
+          />
+        </div>
+        <p class="text-sm leading-relaxed text-gray-700">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+        </p>
+      </div>
+      <div class="md:col-span-1 lg:hidden">
+        <div class="flex gap-3">
+          <a 
+            href="#" 
+            aria-label="Facebook"
+            class="bg-white w-12 h-12 rounded-full flex items-center justify-center  md:inline-flex"
+          >
+           <Facebook/>
+          </a>
+          <a 
+            href="#" 
+            aria-label="Instagram"
+            class="bg-white w-12 h-12 rounded-full flex items-center justify-center  md:inline-flex"
+          >
+            <Instagram />
+          </a>
+          <a 
+            href="#" 
+            aria-label="YouTube"
+            class="bg-white w-12 h-12 rounded-full flex items-center justify-center  md:inline-flex"
+          >
+            <YouTube />
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="flex col-span-2 justify-between lg:justify-evenly">
+        <div class="">
+        <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+        <ul class="space-y-2">
+          <li>
+            <a href="/" class="text-gray-700 hover:text-gray-900 transition-colors">Home</a>
+          </li>
+          <li>
+            <a href="/#" class="text-gray-700 hover:text-gray-900 transition-colors">Areas Covered</a>
+          </li>
+          <li>
+            <a href="/#" class="text-gray-700 hover:text-gray-900 transition-colors">About</a>
+          </li>
+          <li>
+            <a href="/#" class="text-gray-700 hover:text-gray-900 transition-colors">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Get In Touch -->
+      <div class="">
+        <h3 class="text-lg font-semibold mb-4">Get In Touch</h3>
+        <div class="space-y-4">
+          <div>
+            <p class="text-sm text-gray-600 mb-1">Phone Number</p>
+            <a href="tel:0414536134" class="text-gray-900 hover:underline">0414 536134</a>
+          </div>
+          <div>
+            <p class="text-sm text-gray-600 mb-1">Email</p>
+            <a href="mailto:nathan@alternatevision.com.au" class="text-gray-900 hover:underline break-all">nathan@alternatevision.com.au</a>
+          </div>
+          <div>
+            <p class="text-sm text-gray-600 mb-1">Address</p>
+            <p class="text-gray-900">
+              LLC 608 W Johnson st Unit 21<br />
+              Raleigh, NC 27603
+            </p>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <!-- Social Media -->
+      <div class="md:col-span-1 hidden lg:block">
+        <h3 class="text-lg font-semibold mb-4">Social Media</h3>
+        <div class="flex gap-3">
+          <a 
+            href="#" 
+            aria-label="Facebook"
+            class="bg-white w-12 h-12 rounded-full flex items-center justify-center  md:inline-flex"
+          >
+           <Facebook/>
+          </a>
+          <a 
+            href="#" 
+            aria-label="Instagram"
+            class="bg-white w-12 h-12 rounded-full flex items-center justify-center  md:inline-flex"
+          >
+            <Instagram />
+          </a>
+          <a 
+            href="#" 
+            aria-label="YouTube"
+            class="bg-white w-12 h-12 rounded-full flex items-center justify-center  md:inline-flex"
+          >
+            <YouTube />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="border-t border-gray-300 pt-6">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-700">
+        <p>© 2025 All Rights Reserved to Alternate Vision</p>
+        <div class="flex items-center gap-2">
+          <a href="/terms" class="hover:text-gray-900 transition-colors">Terms & Conditions</a>
+          <span>•</span>
+          <a href="/privacy" class="hover:text-gray-900 transition-colors">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Large Text Background -->
+    
+  </div>
+  <div class="mt-8  ">
+      <h2 class="text-[98px] lg:text-[132px] xl:text-[166px] 2xl:text-[180px] text-center font-bold font-perfectly-nineties leading-none text-gray-900">
+        EFC BUILD SERVICE
+      </h2>
+    </div>
+</footer>
